@@ -31,14 +31,20 @@ body {
 
 .header {
   grid-area: header;
+  height: 50vh;
+  background-color: bisque;
 }
-.header h1 {
-  color: blue;
+.header .header__banners .banner {
+  height: 10vh;
+  width: 30vw;
+  background-color: aqua;
+}
+.header .header__banners .container {
+  height: 10vh;
+  width: 50px;
 }
 
 .main {
   grid-area: header;
-}
-.main h1 {
-  color: blue;
+  /**/
 }/*# sourceMappingURL=main.css.map */

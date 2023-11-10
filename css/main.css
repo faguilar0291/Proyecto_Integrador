@@ -30,19 +30,24 @@ body {
 }
 
 .header {
-  grid-area: header;
+  height: 40vh;
+  background-color: bisque;
 }
-.header h1 {
-  color: blue;
+.header .header__banners .banner {
+  height: 6vh;
+  width: 100vw;
+  background-color: aqua;
+}
+.header .container {
+  height: 10vh;
+  width: 100vw;
+  background-color: chartreuse;
 }
 
 .main {
-  grid-area: header;
+  /**/
 }
-.main h1 {
-  color: blue;
-}
-
-h1 {
-  color: red;
+.main .main__section {
+  height: 50vh;
+  background-color: coral;
 }/*# sourceMappingURL=main.css.map */

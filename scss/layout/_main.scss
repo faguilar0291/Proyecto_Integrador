@@ -1,10 +1,14 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mix;
 
-.main {
-    grid-area: header;
 
-    h1 {
-        color: blue;
+.main {
+    
+    /**/
+    .main__section{
+        height: 50vh;
+        background-color: coral;
+
     }
+
 }
