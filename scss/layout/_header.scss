@@ -1,24 +1,3 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mix;
 
-.header {
-
-
-            height: 40vh;
-            background-color: bisque;
-
-            .header__banners {
-                .banner {
-                    height: 6vh;
-                    width: 100vw;
-                    background-color: aqua;
-                }
-            }
-
-            .container {
-                height: 10vh;
-                width: 100vw;
-                background-color: chartreuse;
-
-            }
-}
