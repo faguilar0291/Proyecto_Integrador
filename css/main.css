@@ -1,3 +1,30 @@
-.body__home {
+.body {
   background-color: #88f38a;
+}
+
+.header {
+  background-color: #4cf74f;
+  height: 400px;
+  border: 1px solid black;
+  display: grid;
+}
+.header .header--banner-promo,
+.header .header--h1-title {
+  min-height: 20px;
+  max-height: 30px;
+  font-size: 1.2em;
+  background-color: #000000;
+  color: #f0f8ff;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .header--h1-title {
+  font-size: 1.5em;
+  min-height: 30px;
+  max-height: 40px;
+}
+.header .header--banner-logo {
+  height: 50px;
 }/*# sourceMappingURL=main.css.map */

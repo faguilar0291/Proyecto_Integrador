@@ -1,6 +1,6 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mix;
 
-.body__home{
+.body{
     background-color: var.$fondo_body;
 }
