@@ -1,6 +1,17 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mix;
 
-.body{
+$_padding: 0.5vw;
+
+body{
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+
     background-color: var.$fondo_body;
+    padding: 0.$_padding;
+    width: calc(100% - (2*$_padding));
+
 }

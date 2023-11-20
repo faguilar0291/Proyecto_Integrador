@@ -2,10 +2,11 @@
 @use "../abstracts/mixins" as mix;
 
 .header{
+    grid-area: header;
+
     background-color: var.$fondo_header;
-    height: 400px;
-    border: 1px solid black;
-    display: grid;
+    height: 220px;
+    border: 1px solid var.$black;
 
     .header--banner-promo,
     .header--h1-title{
@@ -28,7 +29,16 @@
     }
 
     .header--banner-logo{
-        height: 50px;
+        height: 150px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+
+        .banner--logo-img, .navbar{
+            height: 100px;
+        }
 
     }
 
