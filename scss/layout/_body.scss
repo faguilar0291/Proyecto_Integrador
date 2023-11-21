@@ -4,14 +4,16 @@
 $_padding: 0.5vw;
 
 body{
+
     display: grid;
     grid-template-areas:
         "header"
         "main"
         "footer";
+    gap: 1vw;
 
     background-color: var.$fondo_body;
-    padding: 0.$_padding;
+    padding: $_padding;
     width: calc(100% - (2*$_padding));
 
 }

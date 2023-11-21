@@ -1,0 +1,45 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+$_width: 100%;
+
+.slider {
+    position: relative;
+    min-height: 360px;
+    min-width: calc($_width * 3);
+    display: flex;
+
+
+    animation-name: move-slides;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+    &__one,
+    &__two,
+    &__three {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        position: absolute;
+        font-size: 2rem;
+        color: aliceblue;
+        background-color: rgba(127, 255, 212, 0.451);
+    }
+
+    &__image {
+        min-height: 360px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    @keyframes move-slides {
+        0% {left: 0;}
+        50% { left: -100%;}
+        100% { left: -200%;}
+    }
+}

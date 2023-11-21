@@ -15,11 +15,73 @@ a:link {
   text-decoration: none;
 }
 
+.slider {
+  position: relative;
+  min-height: 360px;
+  min-width: 300%;
+  display: flex;
+  animation-name: move-slides;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.slider__one, .slider__two, .slider__three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider__title {
+  position: absolute;
+  font-size: 2rem;
+  color: aliceblue;
+  background-color: rgba(127, 255, 212, 0.451);
+}
+.slider__image {
+  min-height: 360px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+@keyframes move-slides {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: -100%;
+  }
+  100% {
+    left: -200%;
+  }
+}
+
+.card {
+  background-color: rgba(0, 0, 255, 0.4274509804);
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card__image {
+  width: 100%;
+  height: auto;
+}
+.card__title {
+  color: aqua;
+}
+.card__price {
+  font-weight: bold;
+}
+.card__price::before {
+  content: "$ ";
+}
+
 body {
   display: grid;
   grid-template-areas: "header" "main" "footer";
+  gap: 1vw;
   background-color: #88f38a;
   padding: 0.5vw;
+  width: calc(100% - 1vw);
 }
 
 .footer {
@@ -29,11 +91,11 @@ body {
 .header {
   grid-area: header;
   background-color: #4cf74f;
-  height: 220px;
+  min-height: 180px;
   border: 1px solid #000000;
 }
-.header .header--banner-promo,
-.header .header--h1-title {
+.header .header__banner-promo,
+.header .header__title {
   min-height: 20px;
   max-height: 30px;
   font-size: 1.2em;
@@ -44,28 +106,34 @@ body {
   justify-content: center;
   align-items: center;
 }
-.header .header--h1-title {
-  font-size: 1.5em;
-  min-height: 30px;
-  max-height: 40px;
+.header .header__title {
+  height: 45px;
+  font-size: 2em;
 }
-.header .header--banner-logo {
-  height: 150px;
+.header .header__logo {
+  min-height: 120px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 }
-.header .header--banner-logo .banner--logo-img, .header .header--banner-logo .navbar {
-  height: 100px;
+.header .header__logo .banner__logo-img {
+  margin-left: 1vw;
+  height: 110px;
 }
 
 .main {
   grid-area: main;
 }
-
-.navbar {
-  grid-area: navbar;
-  width: fit-content;
+.main .section {
+  width: 100%;
+}
+.main .section--slider {
+  overflow: hidden;
+}
+.main .section--products {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
 }/*# sourceMappingURL=main.css.map */

@@ -5,11 +5,11 @@
     grid-area: header;
 
     background-color: var.$fondo_header;
-    height: 220px;
+    min-height: 180px;
     border: 1px solid var.$black;
 
-    .header--banner-promo,
-    .header--h1-title{
+    .header__banner-promo,
+    .header__title{
         min-height: 20px;
         max-height: 30px;
         font-size: 1.2em;
@@ -22,22 +22,22 @@
 
     }
 
-    .header--h1-title{
-        font-size: 1.5em;
-        min-height: 30px;
-        max-height: 40px;
+    .header__title{
+        height: 45px;
+        font-size: 2em;
     }
 
-    .header--banner-logo{
-        height: 150px;
+    .header__logo{
+        min-height: 120px;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
 
-        .banner--logo-img, .navbar{
-            height: 100px;
+        .banner__logo-img{
+            margin-left: 1vw;
+            height: 110px;
         }
 
     }
