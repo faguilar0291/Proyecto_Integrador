@@ -7,6 +7,7 @@
     background-color: var.$fondo_header;
     min-height: 180px;
     width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
     .header__banner-promo,
     .header__title{
@@ -40,16 +41,17 @@
         .banner__logo-img{
             margin-left: 1vw;
             height: 110px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
 
         .cart {
-            border: 1px solid var.$black;
             height: 80px;
             width: 80px;
             margin-right: 5vh;
 
             img {
                 height:inherit;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             }
         }
 

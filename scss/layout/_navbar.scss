@@ -4,7 +4,7 @@
 .navbar {
     height:100px;
     width: 600px;
-    border: 1px solid var.$black;
+
 
     &__menu{
 
@@ -13,14 +13,29 @@
         justify-content: space-between;
 
         .navbar__li {
-            border: 1px solid var.$black;
             height: 50px;
             width: 150px;
             margin-top: 1vw;
             display: flex;
             justify-content: center;
             align-items: center;
+
+            font-size: 2em;
+
+            a:hover {
+                color: var.$active;
+            }
+
+            a:active {
+                color: var.$hover;
+            }
         };
+
+        .navbar__item--active {
+            color: #4040ff;
+            text-decoration: underline;
+            font-weight: 600;
+        }
     };
 
 };

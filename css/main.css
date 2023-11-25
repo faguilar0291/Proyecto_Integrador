@@ -18,7 +18,6 @@ a:link {
 .slider {
   position: relative;
   min-height: 360px;
-  margin-top: 3vh;
   min-width: 3072px;
   display: flex;
   animation-name: move-slides;
@@ -60,21 +59,26 @@ a:link {
   color: #000000;
   padding: 3vw;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 
 .card--product {
   border: 4px solid #a3eb5a;
+  width: 380px;
+  height: 600px;
+  margin-bottom: 2vh;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .card--product .card__media {
-  width: calc(100% - 750px);
-  margin-left: 4vw;
+  width: 200px;
   height: 100%;
 }
 .card--product .card__media .card__image {
-  width: 350px;
+  width: 200px;
 }
 .card--product .card__info--container {
   width: 350px;
@@ -82,16 +86,19 @@ a:link {
 }
 .card--product .card__info--container .card__info--title {
   height: 50px;
-  font-size: 1.7em;
+  font-size: 1.5em;
   font-weight: 600;
 }
 .card--product .card__info--container .card__info--details {
   height: 200px;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 600;
 }
 .card--product .card__info--container .card__info--details p {
   margin-top: 10px;
+}
+.card--product .card__price {
+  width: 350px;
 }
 
 body {
@@ -132,6 +139,7 @@ body {
   background-color: #a3eb5a;
   min-height: 180px;
   width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .header .header__banner-promo,
 .header .header__title {
@@ -162,15 +170,16 @@ body {
 .header .header__logo .banner__logo-img {
   margin-left: 1vw;
   height: 110px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .header .header__logo .cart {
-  border: 1px solid #000000;
   height: 80px;
   width: 80px;
   margin-right: 5vh;
 }
 .header .header__logo .cart img {
   height: inherit;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .main {
@@ -179,21 +188,78 @@ body {
 .main .section {
   width: 100%;
 }
-.main .section--slider {
+.main .section__slider {
   width: 1024px;
   overflow: hidden;
   margin-left: calc((100vw - 1024px) / 2);
+  border-radius: 0.2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.main .section--products {
+.main .section__search {
+  height: 200px;
   display: flex;
   flex-direction: column;
   gap: 1vw;
+  align-items: center;
+}
+.main .section__search h3 {
+  width: 600px;
+  margin-top: 3vh;
+  border: 4px solid #a3eb5a;
+  background-color: rgba(163, 235, 90, 0.5058823529);
+  font-size: 1.8em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.main .section__search .search__form {
+  height: 80px;
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.main .section__search .search__form--input {
+  display: flex;
+  font-size: 1.2rem;
+  border-radius: 0.2rem;
+  border: 1px solid gray;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 10px;
+  background-color: white;
+}
+.main .section__search .search__form--input #id-search-product {
+  border: none;
+  background-color: transparent;
+  width: auto;
+  outline: none;
+  width: 100%;
+  font-size: large;
+}
+.main .section__search .search__form .addproduct {
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 0.2rem;
+  border: 1px solid gray;
+  width: fit-content;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.main .section__products {
+  height: 640px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-around;
 }
 
 .navbar {
   height: 100px;
   width: 600px;
-  border: 1px solid #000000;
 }
 .navbar__menu {
   display: flex;
@@ -201,11 +267,22 @@ body {
   justify-content: space-between;
 }
 .navbar__menu .navbar__li {
-  border: 1px solid #000000;
   height: 50px;
   width: 150px;
   margin-top: 1vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 2em;
+}
+.navbar__menu .navbar__li a:hover {
+  color: #831dd7;
+}
+.navbar__menu .navbar__li a:active {
+  color: #1dc7d7;
+}
+.navbar__menu .navbar__item--active {
+  color: #4040ff;
+  text-decoration: underline;
+  font-weight: 600;
 }/*# sourceMappingURL=main.css.map */
