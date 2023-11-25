@@ -2,5 +2,25 @@
 @use "../abstracts/mixins" as mix;
 
 .navbar {
+    height:100px;
+    width: 600px;
+    border: 1px solid var.$black;
 
-}
+    &__menu{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .navbar__li {
+            border: 1px solid var.$black;
+            height: 50px;
+            width: 150px;
+            margin-top: 1vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        };
+    };
+
+};

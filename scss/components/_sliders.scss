@@ -1,13 +1,15 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mix;
 
-$_width: 100%;
+$_width: 1024px;
 
 .slider {
     position: relative;
     min-height: 360px;
+    margin-top: 3vh;
     min-width: calc($_width * 3);
     display: flex;
+    
 
 
     animation-name: move-slides;
@@ -32,7 +34,7 @@ $_width: 100%;
 
     &__image {
         min-height: 360px;
-        width: 100%;
+        width: 1024px;
         object-fit: cover;
         object-position: center center;
     }

@@ -6,7 +6,7 @@
 
     background-color: var.$fondo_header;
     min-height: 180px;
-    border: 1px solid var.$black;
+    width: 100%;
 
     .header__banner-promo,
     .header__title{
@@ -28,7 +28,9 @@
     }
 
     .header__logo{
-        min-height: 120px;
+        min-height: 100px;
+        margin-top: 3vh;
+        margin-left: 3vw;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -38,6 +40,17 @@
         .banner__logo-img{
             margin-left: 1vw;
             height: 110px;
+        }
+
+        .cart {
+            border: 1px solid var.$black;
+            height: 80px;
+            width: 80px;
+            margin-right: 5vh;
+
+            img {
+                height:inherit;
+            }
         }
 
     }

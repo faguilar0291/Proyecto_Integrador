@@ -19,24 +19,26 @@
 
     <header class="header">
         <div class="header__banner-promo">
-            <p>Envío gratis con tu primer compra - 3, 6 y 12 cuotas fijas</p>
+            <p>Envío gratis con tu primer compra / 3, 6 y 12 cuotas sin interés</p>
         </div>
-        <h1 class="header__title">Bievenid@s a la mejor tecnología!</h1>
         <div class="header__logo">
             <img class="banner__logo-img" src="./images/icons/LOGO.png" alt="logo empresa inefable tech">
             <nav class="navbar">
                 <ul class="navbar__menu">
-                    <li>
+                    <li class="navbar__li">
                         <a class="navbar__item navbar__item--active" href="./index.html">Home</a>
                     </li>
-                    <li>
+                    <li class="navbar__li">
                         <a class="navbar__item" href="./us.html">Nosotros</a>
                     </li>
-                    <li>
+                    <li class="navbar__li">
                         <a class="navbar__item" href="./contact.html">Contacto</a>
                     </li>
                 </ul>
             </nav>
+            <div class="cart">
+                <img src="./images/icons/cart.png" alt="Carrito de compras">
+            </div>
         </div>
     </header>
 
@@ -44,34 +46,30 @@
         <section class="section section--slider">
             <div class="slider">
                 <div class="slider__one">
-                    <h4 class="slider__title">Primer Slider</h4>
+                    <h4 class="slider__title"></h4>
                     <img class="slider__image" src="./images/products/banners/1.png" alt="Banner Black Friday">
                 </div>
                 <div class="slider__two">
-                    <h4 class="slider__title">Segundo Slider</h4>
+                    <h4 class="slider__title"></h4>
                     <img class="slider__image" src="./images/products/banners/2.png" alt="Banner Black Friday">
                 </div>
                 <div class="slider__three">
-                    <h4 class="slider__title">Tercer Slider</h4>
-                    <img class="slider__image" src="./images/products/banners/3.png" alt="Banner Black Friday">
-                </div>
-                <div class="slider__one">
-                    <h4 class="slider__title">Primer Slider</h4>
-                    <img class="slider__image" src="./images/products/banners/1.png" alt="Banner Black Friday">
-                </div>
-                <div class="slider__two">
-                    <h4 class="slider__title">Segundo Slider</h4>
-                    <img class="slider__image" src="./images/products/banners/2.png" alt="Banner Black Friday">
-                </div>
-                <div class="slider__three">
-                    <h4 class="slider__title">Tercer Slider</h4>
+                    <h4 class="slider__title"></h4>
                     <img class="slider__image" src="./images/products/banners/3.png" alt="Banner Black Friday">
                 </div>
             </div>
         </section>
         <section class="section section--products">
-            <h3>Nuestros Productos</h3>
-            <div><p>Formulario de busqueda y link para crear un nuevo producto</p></div>
+            <h3>Lo mejor de la electrónica al mejor precio</h3>
+            <div class="search__form">
+                <div class="search__form--input">
+                    <input type="text" name="search-product" id="id-search-product" placeholder="Buscar productos">
+                    <a title="Buscar" href="#"><img id="search-icon" src="./images/search-icon.png" alt="Buscar"></a>
+                </div>
+                <div class="addproduct">
+                    <a class='addproduct__item' href='/add-product'>Agregar Producto</a>
+                </div>
+            </div>
             <figure class="card card--product">
                 <div class="card__media">
                     <img class="card__image" src="./images/products/DELL-i3250/front.jpg" alt="notebook dell i3250">
@@ -103,7 +101,21 @@
     </main>
 
     <footer class="footer">
-        <span> &copy; 2023 Todos los derechos reservados </span>
+        <div class="footer__socials">
+            <div>
+                <p><strong>Nuestras redes</strong></p>
+            </div>
+            <div>
+                <a href="https://www.facebook.com/" target="_blank"><img src="./images/icons/facebook.png" alt="Logo facebook"></a>
+            </div>
+            <div>
+                <a href="https://www.instagram.com/" target="_blank"><img src="./images/icons/instagram.png" alt="Logo instagram"></a>
+            </div>
+            <div>
+                <a href="https://wa.me/p/6535151196600311/5491122513924" target="_blank"><img src="./images/icons/whatsapp.png" alt="Logo Whatsapp"></a>
+            </div>
+        </div>
+        <span><strong>&copy; 2023 Todos los derechos reservados / Desarrollado por Inefable Tech Web Services</strong></span>
     </footer>
 
 </body>

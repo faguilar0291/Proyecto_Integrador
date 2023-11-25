@@ -4,5 +4,32 @@
 .footer {
     grid-area: footer;
 
-    
+    background-color: var.$fondo_header;
+    min-height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__socials {
+        height: 100px;
+        width: 300px;
+        margin-top: 1vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            font-size: 1.5em;
+        }
+
+        img {
+            height: 30px;
+        }
+
+
+    }
 }
