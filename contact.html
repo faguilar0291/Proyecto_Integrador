@@ -27,13 +27,13 @@
             <nav class="navbar">
                 <ul class="navbar__menu">
                     <li class="navbar__li">
-                        <a class="navbar__item navbar__item--active" href="./index.html">Home</a>
+                        <a class="navbar__item" href="./index.html">Home</a>
                     </li>
                     <li class="navbar__li">
                         <a class="navbar__item" href="./us.html">Nosotros</a>
                     </li>
                     <li class="navbar__li">
-                        <a class="navbar__item" href="./contact.html">Contacto</a>
+                        <a class="navbar__item navbar__item--active" href="./contact.html">Contacto</a>
                     </li>
                 </ul>
             </nav>
@@ -42,6 +42,63 @@
             </div>
         </div>
     </header>
+
+    <main>
+        <section class="section__contact">
+            <section class="section__data">
+                <h2 class="section__data--title">Nuestros datos:</h2>
+                <ul class="contact__data">
+                    <li>📱 Teléfono: +54 011 1522513924</li>
+                    <li>📧 Email: contact@tinchostore.com</li>
+                    <li>🏢 Domicilo: Viamonte 2506 - Balvanera</li>
+                </ul>
+                <h4>También podes contactarnos a través de nuestras redes sociales:</h4>
+                <div class="contact__networks">
+                    <div class="contact__networks--item">
+                        <img src="./images/socialnetworks/facebook.png" alt="Facebook">
+                        <p>Tincho Store</p>
+                    </div>
+                    <div class="contact__networks--item">
+                        <img src="./images/socialnetworks/instagram.png" alt="Instagram">
+                        <p>TinchoStoreArg</p>
+                    </div>
+                    <div class="contact__networks--item">
+                        <img src="./images/socialnetworks/twitter.png" alt="Twitter">
+                        <p>TinchoStoreOK</p>
+                    </div>
+                </div>
+            </section>
+        <section>
+            <form class="formulario">
+                <div class="campo">
+                    <label class="campo__label" for="nombre">Nombre</label>
+                    <input class="campo__field" type="text" placeholder="Tu Nombre" id="nombre">
+                </div>
+                <div class="campo">
+                    <label class="campo__label" for="email">E-mail</label>
+                    <input class="campo__field" type="email" placeholder="Tu E-mail" id="email">
+                </div>
+                <div class="campo">
+                    <label class="campo__label" for="mensaje">Mensaje</label>
+                    <textarea class="campo__field campo__field--textarea" id="mensaje"></textarea>
+                </div>
+            
+                <div class="campo">
+                    <input type="submit" value="Enviar" class="boton boton--primario">
+                </div>
+            </form>
+        </section>
+        <section class="section__location">
+            <h3 class="section__location--title">¿Dónde estamos?</h3>
+            <p class="section__about--text">Visitanos en Av. del Libertador 99299, Nuñez</p>
+            <div class="section__location--map">
+                <iframe
+                        src="https://maps.google.com/maps?q=Viamonte%202506&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                        frameborder="0" scrolling="no" style="width: 480px; height: 330px;">
+                </iframe>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="footer__socials">

@@ -76,7 +76,9 @@
         }
 
         &__products {
-            height: 640px;
+            height: calc(700px * 2);
+            margin-left: calc((100% - (380px * 5)) / 2);
+            margin-right: calc((100% - (380px * 5)) / 2);
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;

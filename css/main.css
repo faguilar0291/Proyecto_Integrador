@@ -67,38 +67,56 @@ a:link {
 
 .card--product {
   border: 4px solid #a3eb5a;
-  width: 380px;
-  height: 600px;
-  margin-bottom: 2vh;
+  width: 350px;
+  height: 650px;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .card--product .card__media {
-  width: 200px;
-  height: 100%;
+  max-width: 220px;
+  max-height: 200px;
+  margin-bottom: 1vh;
 }
 .card--product .card__media .card__image {
-  width: 200px;
+  max-width: 220px;
+  max-height: 200px;
 }
 .card--product .card__info--container {
-  width: 350px;
+  width: 200px;
   height: 100%;
 }
 .card--product .card__info--container .card__info--title {
   height: 50px;
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: 600;
 }
 .card--product .card__info--container .card__info--details {
-  height: 200px;
-  font-size: 1em;
+  height: 190px;
+  font-size: 0.98em;
   font-weight: 600;
 }
 .card--product .card__info--container .card__info--details p {
   margin-top: 10px;
 }
 .card--product .card__price {
-  width: 350px;
+  width: 200px;
+}
+.card--product .card__addcart {
+  height: 30px;
+  width: 90px;
+  margin-top: 2vh;
+}
+.card--product .card__addcart .button {
+  border: 0.0625rem solid black;
+  border-radius: 0.35rem;
+  box-shadow: 1px 1px 4px -3px gray;
+  cursor: pointer;
+}
+.card--product .card__addcart .button--sm {
+  width: 2rem;
+  padding: 0.125rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 body {
@@ -249,7 +267,9 @@ body {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .main .section__products {
-  height: 640px;
+  height: 1400px;
+  margin-left: calc((100% - 1900px) / 2);
+  margin-right: calc((100% - 1900px) / 2);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -285,4 +305,56 @@ body {
   color: #4040ff;
   text-decoration: underline;
   font-weight: 600;
+}
+
+.main .section__us {
+  width: 1024px;
+  min-height: 1024px;
+  margin-left: calc((100% - 1024px) / 2);
+  margin-right: calc((100% - 1024px) / 2);
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  padding: 1vw;
+  border: 1px solid #a3eb5a;
+  background-color: rgba(163, 235, 90, 0.5058823529);
+  border-radius: 0.2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.main .section__us .us--welcome,
+.main .section__us .us--mission,
+.main .section__us .us--joinus {
+  padding: 20px;
+}
+.main .section__us .us--welcome img,
+.main .section__us .us--mission img,
+.main .section__us .us--joinus img {
+  float: left;
+  max-width: 250px;
+}
+.main .section__us .us--welcome p,
+.main .section__us .us--mission p,
+.main .section__us .us--joinus p {
+  width: calc(100% - 300px);
+  margin-left: 270px;
+  font-size: 1.4em;
+  line-height: 1.4em;
+}
+.main .section__us .us--history,
+.main .section__us .us--values {
+  padding: 20px;
+}
+.main .section__us .us--history img,
+.main .section__us .us--values img {
+  float: right;
+  max-width: 300px;
+}
+.main .section__us .us--history p,
+.main .section__us .us--values p {
+  width: calc(100% - 350px);
+  margin-right: 350px;
+  font-size: 1.4em;
+  line-height: 1.4em;
 }/*# sourceMappingURL=main.css.map */
