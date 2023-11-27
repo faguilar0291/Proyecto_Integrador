@@ -46,30 +46,38 @@
     <main class="main main__addproduct">
         <section class="section__addproduct">
             <h2 class="section__addproduct--title">Agregar producto</h2>
+            <br>
             <form class="section__addproduct__form" action="">
                 <div class="section__addproduct__form--data">
                     <label class="data" for="id-name">Nombre del producto:</label>
-                    <input class="data data__input" type="text" name="name" id="id-name">
+                    <input class="data data__input" type="text" name="name" id="id-name" required>
                     <span class="input-error"></span>
                 </div>
                 <div class="section__addproduct__form--data">
                     <label class="data" for="id-price">Precio:</label>
-                    <input class="data data__input" type="text" name="price" id="id-price">
+                    <input class="data data__input" type="number" name="price" id="id-price" required>
                     <span class="input-error"></span>
                 </div>
                 <div class="section__addproduct__form--data">
                     <label class="data" for="id-stock">Stock:</label>
-                    <input class="data data__input" type="text" name="stock" id="id-stock">
+                    <input class="data data__input" type="number" name="stock" id="id-stock" required>
                     <span class="input-error"></span>
                 </div>
                 <div class="section__addproduct__form--data">
                     <label class="data" for="id-brand">Marca:</label>
-                    <input class="data data__input" type="text" name="brand" id="id-brand">
+                    <input class="data data__input" type="text" name="brand" id="id-brand" required>
                     <span class="input-error"></span>
                 </div>
                 <div class="section__addproduct__form--data">
                     <label class="data" for="id-category">Categoría:</label>
-                    <input class="data data__input" type="text" name="category" id="id-category">
+                    <select class="data data__input" name="category" id="id-category">
+                        <option value="Seleccionar">- Seleccionar -</option>
+                        <option value="Telefonía Celular">Telefonía Celular</option>
+                        <option value="Televisores">Televisores</option>
+                        <option value="Computación">Computación</option>
+                        <option value="Audio">Audio</option>
+                        <option value="Eduación">Educación</option>
+                    </select>
                     <span class="input-error"></span>
                 </div>
                 <div class="section__addproduct__form--data">
@@ -111,7 +119,7 @@
                     <span class="alert__close material-symbols-outlined">close</span>
                 </div>
                 <div class="section__addproduct__form--data">
-                    <button type="button" id="id-save">Guardar</button>
+                    <input type="submit" value="Guardar" class="button--submit">
                 </div>
             </form>
         </section>

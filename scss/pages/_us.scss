@@ -5,7 +5,7 @@
 
     .section__us {
         width: 1024px;
-        min-height: 1024px;
+        min-height: calc(128px * 6);
         margin-left: calc((100% - 1024px) / 2);
         margin-right: calc((100% - 1024px) / 2);
         margin-top: 2vh;

@@ -1,2 +1,23 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mix;
+
+.main__addproduct {
+
+    width: 700px;
+        height: calc(128px * 4);
+        margin-left: calc((100% - 700px) / 2);
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    
+        border: 1px solid var.$border_card;
+        background-color: var.$fondo_card;
+        border-radius: 0.2rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

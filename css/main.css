@@ -309,7 +309,7 @@ body {
 
 .main .section__us {
   width: 1024px;
-  min-height: 1024px;
+  min-height: 768px;
   margin-left: calc((100% - 1024px) / 2);
   margin-right: calc((100% - 1024px) / 2);
   margin-top: 2vh;
@@ -392,4 +392,22 @@ body {
   margin-bottom: 3vh;
   width: calc(100% - 15vw);
   border: 1px solid black;
+}
+
+.main__addproduct {
+  width: 700px;
+  height: 512px;
+  margin-left: calc((100% - 700px) / 2);
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid #a3eb5a;
+  background-color: rgba(163, 235, 90, 0.5058823529);
+  border-radius: 0.2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }/*# sourceMappingURL=main.css.map */
