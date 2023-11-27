@@ -30,6 +30,47 @@
             height: 30px;
         }
 
+    }
+}
 
+@media (max-width: 600px) {
+
+    .footer {
+
+        grid-area: footer;
+        
+        background-color: var.$fondo_header;
+        min-height: 100px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        &__socials {
+            height: 50px;
+            width: 300px;
+            margin-top: 1vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            
+            p {
+                font-size: 1em;
+            }
+            
+            img {
+                height: 30px;
+            }
+        }
+
+        span {
+            width: 300px;
+            font-size: 0.6em;
+        }
+        
+    
     }
 }

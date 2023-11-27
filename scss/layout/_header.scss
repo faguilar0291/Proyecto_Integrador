@@ -30,7 +30,7 @@
 
     .header__logo{
         min-height: 100px;
-        margin-top: 3vh;
+        margin-top: 2vh;
         margin-left: 3vw;
         display: flex;
         flex-direction: row;
@@ -57,4 +57,21 @@
 
     }
 
+}
+
+@media (max-width: 600px) {
+    .header {
+        width: 600px;
+        min-height: 150px;
+
+        .header__banner-promo,
+        .header__title {
+            display: none;
+            
+        }
+    }
+
+    .section__slider {
+        display: none;
+    }
 }
