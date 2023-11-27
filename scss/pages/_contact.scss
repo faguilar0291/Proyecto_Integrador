@@ -1,0 +1,50 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.section__contact {
+
+    width: 700px;
+    height: 1024px;
+    margin-left: calc((100% - 700px) / 2);
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    border: 1px solid var.$border_card;
+    background-color: var.$fondo_card;
+    border-radius: 0.2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    .contact__data {
+
+        margin-bottom: 3vh;
+        
+        .contact__networks {
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            
+            .contact__networks--item {
+                
+                img {
+                        height: 30px;
+                    }
+            }
+        }
+    }
+
+    .section__form {
+        margin-bottom: 3vh;
+        width: calc(100% - 15vw);
+        
+
+    }
+}
