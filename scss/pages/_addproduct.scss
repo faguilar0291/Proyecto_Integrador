@@ -21,3 +21,12 @@
         border-radius: 0.2rem;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+@media (max-width: 720px) {
+    .main__addproduct {
+    
+            width: 500px;
+            height: calc(128px * 4);
+            margin-left: calc((100% - 500px) / 2);
+    }
+}

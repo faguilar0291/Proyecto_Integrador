@@ -59,3 +59,53 @@
 
 
 }
+
+@media (max-width: 720px) {
+    .main {
+        .section__us {
+
+            width: 500px;
+            min-height: calc(128px * 6);
+            margin-left: calc((100% - 500px) / 2);
+            margin-right: calc((100% - 500px) / 2);
+
+            .us--welcome,
+            .us--mission,
+            .us--joinus {
+                padding: 20px;
+
+                img {
+                    float: left;
+                    max-width: 150px;
+                }
+
+                p {
+                    width: calc(100% - 200px);
+                    margin-left: 170px;
+                    font-size: 1em;
+                    line-height: 1.4em;
+                }
+
+            }
+
+            .us--history,
+            .us--values {
+                padding: 20px;
+
+                img {
+                    float: right;
+                    max-width: 170px;
+                }
+
+                p {
+                    width: calc(100% - 200px);
+                    margin-right: 170px;
+                    font-size: 1em;
+                    line-height: 1.4em;
+                }
+
+            }
+        }
+
+    }
+}
