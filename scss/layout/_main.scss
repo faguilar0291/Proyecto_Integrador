@@ -88,10 +88,10 @@
 
     }
 
-    @media (max-width: 600px){
+    @media (max-width: 720px){
         .section {
 
-            width: 600px;
+            width: 100%;
 
             &__search {
 
@@ -120,8 +120,8 @@
 
             &__products {
                 height: 100%;
-                margin-left: calc((600px - 250px) / 2);
-                margin-right: calc((600px - 250px) / 2);
+                margin-left: calc((100% - 250px) / 2);
+                margin-right: calc((100% - 250px) / 2);
                 flex-wrap: nowrap;
                 flex-direction: column;
             }

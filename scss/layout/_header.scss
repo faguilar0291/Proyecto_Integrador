@@ -59,19 +59,22 @@
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
     .header {
-        width: 600px;
-        min-height: 150px;
+        width: 100%;
+        min-height: 135px;
 
         .header__banner-promo,
         .header__title {
             display: none;
-            
         }
     }
 
     .section__slider {
+        display: none;
+    }
+
+    .cart {
         display: none;
     }
 }

@@ -82,3 +82,17 @@
 
 }
 
+@media (max-width: 720px){
+    .card--product {
+        height: 600px;
+
+        .card__info--container {
+            width: 200px;
+            height: 240px;
+        }
+    }
+}
+
+// @media (max-width:) {
+
+// }
