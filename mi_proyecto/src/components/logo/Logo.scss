@@ -1,0 +1,13 @@
+@use "../../styles/scss/variables" as var;
+
+.logo {
+
+    img {
+        height: 3rem;
+        width: fit-content;
+    }
+
+    @media (max-width: 620px) {
+        display: none;
+    }
+}
