@@ -42,7 +42,7 @@
         }
     }
 
-    @media (max-width: 420px) {
+    @media (max-width: 450px) {
 
         padding: .7rem .7rem 0 1rem;
 
@@ -51,7 +51,7 @@
         }
     }
 
-    @media (min-width: 421px) {
+    @media (min-width: 451px) {
         &__drawer-icon {
             display: none;
         }
