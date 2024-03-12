@@ -57,3 +57,26 @@
         }
     }
 }
+
+//Aqui cambiamos las opciones CSS de MUI
+.MuiPaper-root {
+
+    .MuiList-root {
+
+        .MuiListItem-root{
+            //con esta opción cambiamos el color al tocar una opción del menú del Drawer
+            -webkit-tap-highlight-color:  var.$colorTapPurpleLight;
+
+            .MuiButtonBase-root {
+
+                .MuiListItemIcon-root {
+
+                    //Aquí cambiamos el color de los iconos del Drawer
+                    .MuiSvgIcon-root{
+                        fill: var.$colorBackgroundDark;
+                    }
+                }
+            }
+        }
+    }
+}
