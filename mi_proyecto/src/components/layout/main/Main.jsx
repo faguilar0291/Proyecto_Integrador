@@ -1,18 +1,30 @@
-import PropTypes from "prop-types";
+import { Route, Routes } from "react-router-dom";
+import { Box } from "@mui/material"
 import "./main.scss";
 
-const Main = (props) => {
-    const { children } = props;
+import Home from "../../../pages/Home";
+import About from "../../../pages/About";
+import Contact from "../../../pages/Contact";
+
+const Main = () => {
 
     return (
-        <main className="main">
-            {children}
-        </main>
+        <Box
+            component="main"
+            className="main">
+            <Routes>
+                <Route
+                    path="/"
+                    element={<Home />} />
+                <Route
+                    path="/about"
+                    element={<About />} />
+                <Route
+                    path="/contact"
+                    element={<Contact />} />
+            </Routes>
+        </Box>
     );
-};
-
-Main.propTypes = {
-    children: PropTypes.node.isRequired,
 };
 
 export default Main;

@@ -1,6 +1,6 @@
 @use "../../../styles/scss/variables" as var;
 
-//paso a clase 48
+//paso a clase 48 1:09
 
 .navbar {
 
@@ -25,7 +25,12 @@
     &__items {
         a {
             font-size: .7rem;
-            color: var.$colorBackgroundLight;
+            color: var.$colorFontDarker;
+        }
+
+        .active {
+            color: var.$colorFontLight;
+            text-shadow: 1px 1px 3px black;
         }
     }
 
