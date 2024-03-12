@@ -6,6 +6,8 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import "./navbar.scss";
 
+//clase 48 min 27
+
 const Navbar = () => {
 
     const [ openDrawer, setOpenDrawer ] = useState(false);
