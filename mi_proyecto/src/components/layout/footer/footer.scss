@@ -1,4 +1,39 @@
+@use "../../../styles/scss/variables" as var;
+
 .footer {
     grid-area: footer;
+
     width: 100%;
+    padding: .7rem 0;
+    background-color: var.$colorBackgroundDark;
+    box-shadow: 10px 1px 15px 1px #c251f6e6;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__groups {
+        width: 90vw;
+        padding-top: .7rem;
+        padding-bottom: .7rem;
+        border-top: .1rem solid var.$colorBorderLight;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__copyrigth {
+        width: 90vw;
+        border-top: .1rem solid var.$colorBorderLight;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        span {
+            color: var.$colorFontLight;
+            padding-top: .7rem;
+        }
+    }
 }
