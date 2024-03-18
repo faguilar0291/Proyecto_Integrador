@@ -12,7 +12,7 @@
     align-items: center;
 
     width: 100%;
-    padding: .7rem .7rem 0 0;
+    padding: .3rem .7rem 0 0;
     background-color: var.$colorBackgroundDark;
     box-shadow: 10px 1px 15px 1px #c251f6e6;
 
@@ -24,7 +24,7 @@
 
     &__items {
         a {
-            font-size: .7rem;
+            font-size: .6rem;
             color: var.$colorFontDarker;
         }
 
@@ -38,10 +38,12 @@
         &__icon-badge {
             svg {
                 fill: var.$colorBackgroundLight;
+                height: .9rem;
             }
 
             span {
                 background-color: var.$colorBackgroundDarker;
+                font-size: .6rem;
             }
 
         }
@@ -68,16 +70,16 @@
 
     .MuiList-root {
 
-        .MuiListItem-root{
+        .MuiListItem-root {
             //con esta opción cambiamos el color al tocar una opción del menú del Drawer
-            -webkit-tap-highlight-color:  var.$colorTapPurpleLight;
+            -webkit-tap-highlight-color: var.$colorTapPurpleLight;
 
             .MuiButtonBase-root {
 
                 .MuiListItemIcon-root {
 
                     //Aquí cambiamos el color de los iconos del Drawer
-                    .MuiSvgIcon-root{
+                    .MuiSvgIcon-root {
                         fill: var.$colorBackgroundDark;
                     }
                 }
