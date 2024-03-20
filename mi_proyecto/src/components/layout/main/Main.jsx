@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Box } from "@mui/material"
+import { Box } from "@mui/material";
 import "./main.scss";
 
 import Home from "../../../pages/Home";
@@ -15,13 +15,13 @@ const Main = () => {
             <Routes>
                 <Route
                     path="/"
-                    element={<Home />} />
+                    element={<Home/>}/>
                 <Route
                     path="/about"
-                    element={<About />} />
+                    element={<About/>}/>
                 <Route
                     path="/contact"
-                    element={<Contact />} />
+                    element={<Contact/>}/>
             </Routes>
         </Box>
     );
