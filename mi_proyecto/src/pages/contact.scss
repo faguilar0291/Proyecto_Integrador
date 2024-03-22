@@ -1,0 +1,25 @@
+@use "../styles/scss/variables" as var;
+
+
+
+.contact {
+
+    width: var.$widthContact;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+
+    margin: 0 auto;
+
+    &__section {
+        width: var.$widthContact;
+        padding: 1rem 0;
+
+        &--data {
+
+            font-size: .8rem;
+        }
+    }
+}

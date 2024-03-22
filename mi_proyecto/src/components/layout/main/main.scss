@@ -3,11 +3,10 @@
 .main {
     grid-area: main;
     height: max-content;
-
-    width: 100%;
+    width: var.$widthMain;
     padding: .5rem;
-    //background-color: var.$colorBackgroundLight;
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
