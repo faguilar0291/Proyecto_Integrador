@@ -1,7 +1,6 @@
 @use "../styles/scss/variables" as var;
 
 
-
 .contact {
 
     width: var.$widthContact;
@@ -14,7 +13,7 @@
     margin: 0 auto;
 
     &__section {
-        width: var.$widthContact;
+        width: var.$widthMain;
         padding: 1rem 0;
 
         &--data {

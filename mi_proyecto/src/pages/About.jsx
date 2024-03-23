@@ -1,8 +1,6 @@
 import { Box } from "@mui/material";
 import "./about.scss";
 
-//clase 49 - 42min
-
 const About = () => {
     return (
         <Box className="about">
