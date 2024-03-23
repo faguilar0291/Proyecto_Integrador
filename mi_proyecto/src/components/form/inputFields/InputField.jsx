@@ -4,17 +4,22 @@ import "./inputField.scss";
 
 const InputField = (props) => {
 
-    const { multiline, label, type, rows, name} = props;
+    const { multiline, label, type, rows, name, value, onChange, onBlur, error, errorMessage } = props;
     return (
-        <TextField 
+        <TextField
             className="input-field"
             label={label}
             type={type}
             multiline={multiline}
             rows={rows}
             name={name}
-            id={name}>
-
+            id={name}
+            value={value}
+            onChange={onChange}
+            onBlur={onBlur}
+            error={error}
+            helperText={errorMessage}
+        >
         </TextField>
     );
 };
@@ -25,17 +30,19 @@ InputField.propTypes = {
     multiline: PropTypes.bool,
     rows: PropTypes.number,
     name: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    onBlur: PropTypes.func.isRequired,
     id: PropTypes.string,
+    error: PropTypes.bool,
+    errorMessage: PropTypes.string,
 };
 
 InputField.defaultProps = {
     type: "text",
     multiline: false,
+    error: false,
+    errorMessage: "",
 };
 
 export default InputField;
-
-
-
-
-//clase 49 1:51

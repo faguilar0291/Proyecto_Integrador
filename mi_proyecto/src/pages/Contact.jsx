@@ -1,5 +1,6 @@
 import { Box, Button, TextField } from "@mui/material";
 import { useFormik } from "formik";
+import * as yup from "yup";
 import "./contact.scss";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
@@ -10,10 +11,25 @@ import InputField from "../components/form/inputFields/InputField";
 
 const Contact = () => {
 
+    const validationSchema = yup.object({
+        fullname: yup
+            .string("Ingrese su nombre con letras")
+            .min(10, "El nombre y apellido debe tener como mínimo 10 caracteres")
+            .max(30, "El nombre completo no debe tener más de 30 caracteres")
+            .required("Campo requerido"),
+        telephone: yup
+            .number("Ingrese solo números con letras")
+            .min(8, "El número debe tener como mínimo 8 caracteres")
+            .max(12, "El número no debe tener más de 12 caracteres")
+            .required("Campo requerido"),
+    });
+
     const formik = useFormik({
         initialValues: {
             fullname: "",
+            telephone: "",
         },
+        validationSchema: validationSchema,
         onSubmit: (values) => {
             console.log(values);
         },
@@ -25,22 +41,31 @@ const Contact = () => {
                 className="contact__section">
                 <h3>Hace tu consulta</h3>
 
-                <Box 
+                <Box
                     component="form"
                     noValidate
                     autoComplete="off"
                     onSubmit={formik.handleSubmit}>
                     <InputField
-                        fullWidth
                         label="Nombre y Apellido"
-                        name="fullname">
+                        name="fullname"
+                        value={formik.values.fullname}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        error={formik.touched.fullname && Boolean(formik.errors.fullname)}
+                        errorMessage={formik.touched.fullname && formik.errors.fullname}
+                    >
                     </InputField>
-                    <TextField
-                        fullWidth
-                        autoComplete="off"
+                    <InputField
                         label="Teléfono"
-                        name="telephone">
-                    </TextField>
+                        name="telephone"
+                        value={formik.values.telephone}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        error={formik.touched.telephone && Boolean(formik.errors.telephone)}
+                        errorMessage={formik.touched.telephone && formik.errors.telephone}
+                    >
+                    </InputField>
                     <TextField
                         fullWidth
                         autoComplete="off"
@@ -54,7 +79,7 @@ const Contact = () => {
                         label="Consulta"
                         name="consult">
                     </TextField>
-                    <Button 
+                    <Button
                         type="submit"
                         variant="contained"
                         size="small">Enviar consulta</Button>
