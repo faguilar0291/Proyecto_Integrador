@@ -1,4 +1,4 @@
-import { Box, Button, TextField } from "@mui/material";
+import { Box } from "@mui/material";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import "./contact.scss";
@@ -6,22 +6,35 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import InputField from "../components/form/inputFields/InputField";
+import Button from "../components/button/Button";
 
-//Clase 49 , 2hr 13min
+//sigue clase 50
 
 const Contact = () => {
 
+    const MESSAGE_REQUIRED = "Dato requerido";
+    //const REGEX_TELEPHONE = /^[(][0-9]{3,4}[)][0-9]{3}[-][0-9]{4,8}$/;
+    const REGEX_EMAIL = /^[a-z0-9.]+@[a-z0-9-]+.(com$|com.[a-z0-9]{2}$)/;
+
     const validationSchema = yup.object({
         fullname: yup
-            .string("Ingrese su nombre con letras")
-            .min(10, "El nombre y apellido debe tener como mínimo 10 caracteres")
-            .max(30, "El nombre completo no debe tener más de 30 caracteres")
-            .required("Campo requerido"),
+            .string("Ingrese su nombre y apellido con letras")
+            .min(8, "El nombre y apellido debe tener como mínimo 8 caracteres")
+            .required(MESSAGE_REQUIRED),
         telephone: yup
-            .number("Ingrese solo números con letras")
+            .number("Ingrese solo números")
             .min(8, "El número debe tener como mínimo 8 caracteres")
-            .max(12, "El número no debe tener más de 12 caracteres")
-            .required("Campo requerido"),
+            //.matches(REGEX_TELEPHONE, "Ingresa un teléfono válido") //--> me tira error al usarlo
+            .required(MESSAGE_REQUIRED),
+        email: yup
+            .string("Ingresa tu email")
+            .min(12, "El email debe tener como mínimo 12 caracteres")
+            .matches(REGEX_EMAIL, "Ingresa un email válido") // -> pero este no
+            .required(MESSAGE_REQUIRED),
+        consult: yup
+            .string("Ingresa tu consulta")
+            .min(20, "Ingresa una consulta entre 20 y 150 caracteres")
+            .required(MESSAGE_REQUIRED),
     });
 
     const formik = useFormik({
@@ -54,6 +67,7 @@ const Contact = () => {
                         onBlur={formik.handleBlur}
                         error={formik.touched.fullname && Boolean(formik.errors.fullname)}
                         errorMessage={formik.touched.fullname && formik.errors.fullname}
+                        inputProps={{ maxLength: 50 }}
                     >
                     </InputField>
                     <InputField
@@ -64,25 +78,32 @@ const Contact = () => {
                         onBlur={formik.handleBlur}
                         error={formik.touched.telephone && Boolean(formik.errors.telephone)}
                         errorMessage={formik.touched.telephone && formik.errors.telephone}
+                        inputProps={{ maxLength: 150 }}
                     >
                     </InputField>
-                    <TextField
-                        fullWidth
-                        autoComplete="off"
+                    <InputField
                         label="Email"
-                        name="email">
-                    </TextField>
-                    <TextField
-                        fullWidth
-                        multiline
-                        rows="4"
+                        name="email"
+                        value={formik.values.email}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        error={formik.touched.email && Boolean(formik.errors.email)}
+                        errorMessage={formik.touched.email && formik.errors.email}
+                    >
+                    </InputField>
+                    <InputField
                         label="Consulta"
-                        name="consult">
-                    </TextField>
-                    <Button
-                        type="submit"
-                        variant="contained"
-                        size="small">Enviar consulta</Button>
+                        name="consult"
+                        multiline
+                        rows={4}
+                        value={formik.values.consult}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        error={formik.touched.consult && Boolean(formik.errors.consult)}
+                        errorMessage={formik.touched.consult && formik.errors.consult}
+                    >
+                    </InputField>
+                    <Button type="submit">Enviar consulta</Button>
                 </Box>
             </Box>
             <Box

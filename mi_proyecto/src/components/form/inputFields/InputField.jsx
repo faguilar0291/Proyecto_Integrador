@@ -2,9 +2,20 @@ import PropTypes from "prop-types";
 import { TextField } from "@mui/material";
 import "./inputField.scss";
 
+//sigue clase 50
 const InputField = (props) => {
 
-    const { multiline, label, type, rows, name, value, onChange, onBlur, error, errorMessage } = props;
+    const { multiline,
+        label,
+        type,
+        rows,
+        name,
+        value,
+        onChange,
+        onBlur,
+        error,
+        errorMessage,
+        inputProps } = props;
     return (
         <TextField
             className="input-field"
@@ -19,6 +30,7 @@ const InputField = (props) => {
             onBlur={onBlur}
             error={error}
             helperText={errorMessage}
+            inputProps={inputProps}
         >
         </TextField>
     );
@@ -30,12 +42,13 @@ InputField.propTypes = {
     multiline: PropTypes.bool,
     rows: PropTypes.number,
     name: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
+    value: PropTypes.string,
     onChange: PropTypes.func.isRequired,
     onBlur: PropTypes.func.isRequired,
     id: PropTypes.string,
     error: PropTypes.bool,
     errorMessage: PropTypes.string,
+    inputProps: PropTypes.object,
 };
 
 InputField.defaultProps = {
@@ -43,6 +56,7 @@ InputField.defaultProps = {
     multiline: false,
     error: false,
     errorMessage: "",
+    inputProps: {},
 };
 
 export default InputField;

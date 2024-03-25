@@ -1,0 +1,13 @@
+@use "../../styles/scss/variables" as var;
+
+.button {
+
+    width: var.$widthMain;
+    background-color: var.$colorBackgroundDark !important;
+
+    :hover {
+        background-color: var.$colorBorderDanger !important;
+    }
+}
+
+//clase 50 min 37:22
