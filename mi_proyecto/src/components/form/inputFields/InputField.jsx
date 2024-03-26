@@ -18,7 +18,7 @@ const InputField = (props) => {
         inputProps } = props;
     return (
         <TextField
-            className="input-field"
+            className={`input-field ${error ? "input-field--invalid" : "input-field--valid"}`}
             label={label}
             type={type}
             multiline={multiline}

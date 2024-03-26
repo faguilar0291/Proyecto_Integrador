@@ -2,4 +2,28 @@
 
 .input-field {
     width: 100%;
+
+    &--valid {
+
+        label.Mui-focused {
+            color: var.$colorLabelValid !important;
+        }
+
+        div input:focus+fieldset,
+        div textarea:focus+fieldset {
+            border-color: var.$colorLabelValid !important;
+        }
+    }
+
+    &--invalid {
+
+        label.Mui-focused {
+            color: var.$colorLabelInValid !important;
+        }
+
+        div input:focus+fieldset,
+        div textarea:focus+fieldset {
+            border-color: var.$colorLabelInValid !important;
+        }
+    }
 }

@@ -5,8 +5,8 @@
     width: var.$widthMain;
     background-color: var.$colorBackgroundDark !important;
 
-    :hover {
-        background-color: var.$colorBorderDanger !important;
+    &:hover {
+        background-color: var.$colorBackgroundGreen !important;
     }
 }
 
