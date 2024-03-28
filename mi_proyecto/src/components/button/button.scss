@@ -2,12 +2,35 @@
 
 .button {
 
-    width: var.$widthMain;
     background-color: var.$colorBackgroundDark !important;
 
     &:hover {
         background-color: var.$colorBackgroundGreen !important;
     }
+
+    svg {
+        fill: var.$colorFontLight;
+        font-size: var.$fontSizeMD;
+    }
+
+    &-danger {
+        background-color: var.$colorBackgroundDanger !important;
+
+        &:hover {
+            background-color: var.$colorBackgroundDangerLight !important;
+        }
+    }
+
+    &-green {
+        background-color: var.$colorBackgroundGreen !important;
+
+        &:hover {
+            background-color: var.$colorBackgroundGreenLight !important;
+        }
+    }
+
+
+
 }
 
 //clase 50 min 37:22

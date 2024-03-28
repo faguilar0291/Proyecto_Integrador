@@ -5,7 +5,7 @@
 .contact {
 
     width: var.$widthContact;
-    min-height: 100vh;
+    height: 100%;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -28,19 +28,25 @@
         }
 
         &--data {
-            margin-bottom: .7rem;
+            margin-bottom: 1rem;
             font-size: .8rem;
 
             .data__container {
 
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: left;
             }
         }
 
         &--map {
             font-size: .8rem;
+
+            iframe {
+                border: .4rem outset var.$colorBackgroundDarker;
+                height: 27vh;
+                width: 100%;
+            }
 
             h2 {
                 margin-bottom: .7rem;
@@ -51,5 +57,19 @@
     @media (max-width: 650px) {
 
         grid-template-columns: 1fr;
+
+        &__section {
+
+            &--map {
+
+                iframe {
+                    height: 32vh;
+                }
+
+                h2 {
+                    margin-bottom: .6rem;
+                }
+            }
+        }
     }
 }

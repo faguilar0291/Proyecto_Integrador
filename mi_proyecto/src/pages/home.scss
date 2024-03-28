@@ -1,0 +1,21 @@
+@use "../styles/scss/variables" as var;
+
+//clase 50 1hr:15
+
+.home {
+
+    width: var.$widthContent;
+
+    &__section {
+        &__search {}
+
+        &__cards {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: .5rem;
+            padding: 1rem 0;
+        }
+    }
+
+    @media (max-width: 650px) {}
+}

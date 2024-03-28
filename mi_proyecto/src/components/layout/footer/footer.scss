@@ -79,6 +79,28 @@
         }
     }
 
+    @media (max-width: 700px) {
+
+        &__groups {
+            display: grid;
+            grid-template-columns: 2fr repeat(1);
+
+            &__title {
+                padding-top: .5rem;
+            }
+
+            &__list {
+
+                &--social-media {
+
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+
     @media (max-width: 650px) {
 
         &__groups {

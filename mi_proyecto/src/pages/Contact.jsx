@@ -102,7 +102,9 @@ const Contact = () => {
                         errorMessage={formik.touched.consult && formik.errors.consult}
                     >
                     </InputField>
-                    <Button type="submit">Enviar consulta</Button>
+                    <Button
+                        type="submit"
+                        className="button">Enviar consulta</Button>
                 </Box>
             </Box>
             <Box
@@ -124,8 +126,6 @@ const Contact = () => {
                     <h2>Nuestro mapita</h2>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1640.4237451358956!2d-58.38663086032716!3d-34.6837984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcccc5ce2e9605%3A0x23fbbe423eb0a7da!2sB%26B%20Grouting%20S.r.l.!5e0!3m2!1ses-419!2sar!4v1711071226336!5m2!1ses-419!2sar"
-                        width="100%"
-                        height="300"
                         loading="lazy"></iframe>
                 </Box>
             </Box>

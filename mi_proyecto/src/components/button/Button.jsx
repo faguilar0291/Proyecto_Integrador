@@ -4,10 +4,10 @@ import "./button.scss";
 
 const Button = (props) => {
 
-    const { type, children } = props;
+    const { type, children, className } = props;
     return (
         <ButtonUI
-            className="button"
+            className={className}
             type={type}
             variant="contained">
             {children}
@@ -17,11 +17,13 @@ const Button = (props) => {
 
 Button.propTypes = {
     type: PropTypes.string,
+    className: PropTypes.string,
     children: PropTypes.string.isRequired,
 };
 
 Button.defaultProps = {
     type: "button",
+    className: "button",
 };
 
 export default Button;

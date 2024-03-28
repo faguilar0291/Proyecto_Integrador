@@ -1,0 +1,54 @@
+@use "../../styles/scss/variables" as var;
+
+$_width: 100%;
+
+.product-card {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content auto max-content;
+
+    width: $_width;
+    padding: .2rem;
+
+    &__image {
+        width: $_width;
+        border-radius: .5rem / .5rem;
+    }
+
+    &__content {
+        width: $_width;
+        padding: 0 !important;
+
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        align-items: center;
+
+        h4 {
+            font-size: var.$fontSizeMD;
+        }
+
+        p {
+            font-size: var.$fontSizeSM;
+            text-align: justify;
+
+            span {
+                font-weight: bold;
+            }
+        }
+
+        :last-child {
+            margin-top: auto;
+        }
+
+    }
+
+    &__actions {
+        width: $_width;
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (max-width: 620px) {}
+}
